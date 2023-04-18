@@ -1,5 +1,40 @@
 import images from './images';
 
+const slider = [
+  {
+    subheading: 'Chase the new Flavour',
+    title: 'The key to Fine dining',
+    text: 'Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus',
+    linkText: 'Explore Menu',
+    linkUrl: '#',
+    image: images.slide01
+  },
+  {
+    subheading: 'Chase the new Flavour',
+    title: 'Reserve you table today',
+    text: 'Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus',
+    linkText: 'Explore Menu',
+    linkUrl: '#',
+    image: images.slide02
+  },
+  {
+    subheading: 'Chase the new Flavour',
+    title: 'Food that surprise you',
+    text: 'Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus',
+    linkText: 'Explore Menu',
+    linkUrl: '#',
+    image: images.slide03
+  },
+  {
+    subheading: 'Chase the new Flavour',
+    title: 'Love the original taste',
+    text: 'Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus',
+    linkText: 'Explore Menu',
+    linkUrl: '#',
+    image: images.slide04
+  }
+];
+
 const wines = [
   {
     title: 'Chapel Hill Shiraz',
@@ -79,4 +114,4 @@ const awards = [
   },
 ];
 
-export default { wines, cocktails, awards };
+export default { slider, wines, cocktails, awards };

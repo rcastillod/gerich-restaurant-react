@@ -38,6 +38,14 @@ a {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  padding: 0;
+}
+
+/* Remove default margin and padding */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
 }
 
 /* Set core root defaults */
@@ -91,8 +99,27 @@ select {
 /* -------------------------------------------------------------------------- */
 /*                                   GLOBAL                                   */
 /* -------------------------------------------------------------------------- */
+
+/* Container */
+.container {
+  --max-width: 90rem;
+  --padding: 2rem;
+  width: min(100% - var(--padding), var(--max-width));
+  margin-inline: auto;
+}
+
+@media (min-width: 36em) {
+  .container {
+    padding-inline: 2rem;
+  }
+}
+
 .section__padding {
   padding: 4rem 6rem;
+}
+
+.section__padding-block {
+  padding: 4rem 0;
 }
 
 .flex__center {
@@ -114,10 +141,10 @@ select {
   justify-content: space-between;
   align-items: center;
 
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
-.app__wrapper_info {
+.app__wrapper-info {
   flex: 1;
   width: 100%;
   display: flex;
@@ -126,7 +153,7 @@ select {
   flex-direction: column;
 }
 
-.app__wrapper_img {
+.app__wrapper-img {
   flex: 1;
   width: 100%;
   display: flex;
@@ -136,28 +163,28 @@ select {
   margin-left: 2rem;
 }
 
-.app__wrapper_img-reverse {
+.app__wrapper-img-reverse {
   justify-content: flex-start;
   margin-right: 2rem;
 }
 
-.app__wrapper_img img {
+.app__wrapper-img img {
   width: 80%;
 }
 
-.custom__button {
-  background-color: var(--color-crimson);
-    color: var(--color-black);
-    font-family: var(--font-base);
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    line-height: 28px;
-    font-size: 16px;
-    padding: 0.5rem 1.5rem;
-    border-radius: 1px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.button {
+  background-color: var(--color-golden);
+  color: var(--color-black);
+  font-family: var(--font-base);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  line-height: 28px;
+  padding: 0.8rem 2rem;
+  border-radius: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .p__cormorant {
@@ -221,15 +248,15 @@ select {
     flex-direction: column;
   }
 
-  .app__wrapper_img {
+  .app__wrapper-img {
     margin: 5rem 0 0 0;
   }
 
-  .app__wrapper_img-reverse {
+  .app__wrapper-img-reverse {
     margin: 0 0 5rem 0;
   }
 
-  .app__wrapper_img img {
+  .app__wrapper-img img {
     width: 100%;
   }
 }
@@ -238,11 +265,19 @@ select {
   .section__padding {
     padding: 4rem;
   }
+  
+  .section__padding-block {
+    padding: 4rem 0;
+  }
 }
 
 @media screen and (max-width: 650px) {
   .section__padding {
     padding: 4rem 2rem;
+  }
+  
+  .section__padding-block {
+    padding: 4rem 0;
   }
   
   .p__cormorant {

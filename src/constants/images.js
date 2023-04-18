@@ -1,3 +1,7 @@
+import slide01 from '../assets/slide01.png';
+import slide02 from '../assets/slide02.png';
+import slide03 from '../assets/slide03.png';
+import slide04 from '../assets/slide04.png';
 import bg from '../assets/bg.png';
 import chef from '../assets/chef.png';
 import G from '../assets/G.png';
@@ -22,6 +26,10 @@ import quote from '../assets/quote.png';
 import gericht from '../assets/gericht.png';
 
 export default {
+  slide01,
+  slide02,
+  slide03,
+  slide04,
   bg,
   chef,
   G,
