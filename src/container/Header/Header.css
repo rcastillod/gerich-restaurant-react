@@ -1,5 +1,5 @@
 /* Info */
-.app__wrapper-info > * {
+.app__header .app__wrapper-info > * {
   opacity: 0;
   transform: translateY(25px);
   transition: all 0.4s;
@@ -35,7 +35,7 @@
 }
 
 /* image */
-.app__wrapper-img img {
+.app__header .app__wrapper-img img {
   opacity: 0;
   width: 90%;
   transition: all 0.3s;

@@ -23,6 +23,7 @@ import award03 from '../assets/award03.png';
 import award05 from '../assets/award05.png';
 import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
+import quoteSvg from '../assets/quote.svg';
 import gericht from '../assets/gericht.png';
 
 export default {
@@ -51,5 +52,6 @@ export default {
   award05,
   sign,
   quote,
+  quoteSvg,
   gericht,
 };

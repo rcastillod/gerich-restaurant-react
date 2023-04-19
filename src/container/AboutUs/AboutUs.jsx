@@ -27,7 +27,7 @@ const AboutUs = () => (
             Know More
           </a>
         </div>
-        <div className="app__aboutus-content_knife felx__center">
+        <div className="app__aboutus-content_knife flex__center">
           <img src={images.knife} alt="knife" />
         </div>
         <div className="app__aboutus-content_history">
