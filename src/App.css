@@ -10,7 +10,8 @@
 }
 
 /* Smooth scroll */
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -35,8 +36,8 @@ a {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
   padding: 0;
 }
@@ -85,7 +86,7 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -129,7 +130,7 @@ select {
 }
 
 .app__bg {
-  background: url('./assets/bg.png');
+  background: url("./assets/bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
@@ -185,6 +186,12 @@ select {
   border: none;
   outline: none;
   cursor: pointer;
+  transition: all var(--transition);
+}
+
+.button:is(:hover, :focus) {
+  background-color: var(--color-grey);
+  color: var(--color-black);
 }
 
 .p__cormorant {
@@ -193,7 +200,7 @@ select {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: capitalize;
-  font-feature-settings: 'tnum' on, 'lnum' on;
+  font-feature-settings: "tnum" on, "lnum" on;
   line-height: 29.9px;
   font-size: 23px;
 }
@@ -211,8 +218,8 @@ select {
 .headtext__cormorant {
   font-family: var(--font-base);
   color: var(--color-golden);
-  font-size: 64px;
-  line-height: 83.2px;
+  font-size: clamp(2.625rem, 7vw, 4rem);
+  line-height: clamp(3rem, 7vw, 5.1875rem);
   letter-spacing: 0.04em;
   text-transform: capitalize;
 }
@@ -265,7 +272,7 @@ select {
   .section__padding {
     padding: 4rem;
   }
-  
+
   .section__padding-block {
     padding: 4rem 0;
   }
@@ -275,11 +282,11 @@ select {
   .section__padding {
     padding: 4rem 2rem;
   }
-  
+
   .section__padding-block {
     padding: 4rem 0;
   }
-  
+
   .p__cormorant {
     font-size: 21px;
   }
@@ -291,7 +298,7 @@ select {
 
 @media screen and (max-width: 450px) {
   .p__opensans {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .p__cormorant {

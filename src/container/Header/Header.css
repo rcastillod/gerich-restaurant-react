@@ -16,7 +16,7 @@
 
   font-weight: 700;
   font-size: clamp(3.75rem, 7vw, 5.625rem);
-  line-height: clamp(5.4375rem, 7vw, 7.3125rem);
+  line-height: clamp(4.625rem, 7vw, 7.3125rem);
   letter-spacing: 0.04em;
   text-transform: capitalize;
 }
