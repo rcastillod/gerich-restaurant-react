@@ -1,0 +1,146 @@
+.app__gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  padding: 2rem 0 2rem 2rem;
+}
+
+@media (min-width: 40.625em) {
+  .app__gallery {
+    padding: 4rem 0 4rem 4rem;
+  }
+}
+
+@media (min-width: 65.625em) {
+  .app__gallery {
+    flex-direction: row;
+    padding: 4rem 0 4rem 6rem;
+  }
+}
+
+.app__gallery-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  padding-block-end: 2rem;
+}
+
+@media (min-width: 65.625em) {
+  .app__gallery-content {
+    min-width: 31.25rem;
+    max-width: 32.5rem;
+  }
+}
+
+.app__gallery-images {
+  flex: 1;
+  display: flex;
+  max-width: 100%;
+  position: relative;
+}
+
+@media (min-width: 65.625em) {
+  .app__gallery-images {
+    max-width: 50%;
+  }
+}
+
+.app__gallery-images_container {
+  background-color: var(--color-black);
+  display: flex;
+  width: max-content;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.app__gallery-images_container::-webkit-scrollbar {
+  display: none;
+}
+
+.app__gallery-images_card {
+  position: relative;
+  min-width: 301px;
+  height: 447px;
+  margin-inline-end: 2rem;
+}
+
+.app__gallery-images_card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: var(--transition);
+}
+
+.gallery__image-icon {
+  position: absolute;
+  color: var(--color-white);
+  font-size: 2rem;
+  opacity: 0;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.app__gallery-images_card:is(:hover, :focus) img {
+  opacity: 0.4;
+}
+
+.app__gallery-images_card:is(:hover, :focus) .gallery__image-icon {
+  opacity: 1;
+}
+
+.app__gallery-images_navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  bottom: 5%;
+}
+
+.gallery__arrow-icon {
+  height: 3.75rem;
+  width: 3.75rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-black);
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.gallery__arrow-icon > svg {
+  color: var(--color-golden);
+  font-size: 1rem;
+}
+
+.gallery__arrow-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background-color: var(--color-golden);
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  z-index: -1;
+}
+
+.gallery__arrow-icon:is(:hover, :focus)::before {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+.gallery__arrow-icon:is(:hover, :focus) > svg {
+  color: var(--color-black) !important;
+}
