@@ -25,6 +25,7 @@ import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
 import quoteSvg from '../assets/quote.svg';
 import gericht from '../assets/gericht.png';
+import newsletter from '../assets/newsletter-bg.webp';
 
 export default {
   slide01,
@@ -54,4 +55,5 @@ export default {
   quote,
   quoteSvg,
   gericht,
+  newsletter
 };

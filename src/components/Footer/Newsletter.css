@@ -1,0 +1,63 @@
+.app__newsletter {
+  border: 1px solid var(--color-golden);
+  padding: 2rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 31.25em) {
+  .app__newsletter {
+    padding: 2rem 4rem;
+  }
+}
+
+.app__newsletter::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../assets/newsletter-bg.webp);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.app__newsletter-heading {
+  text-align: center;
+}
+
+.app__newsletter-input {
+  flex-direction: column;
+  margin-block-start: 3rem;
+}
+
+@media (min-width: 31.25em) {
+  .app__newsletter-input {
+    flex-direction: row;
+  }
+}
+
+.app__newsletter-input input {
+  border: 1px solid var(--color-golden);
+  font-size: 1rem;
+  font-family: var(--font-base);
+  color: var(--color-white);
+  background-color: var(--color-black);
+
+  margin: 0 0 2rem 0;
+  padding: 0.75rem 1rem;
+  width: clamp(100%, 7vw, 38.75rem);
+}
+
+@media (min-width: 31.25em) {
+  .app__newsletter-input input {
+    margin: 0 2rem 0 0;
+  }
+}
+
+.app__newsletter-input button {
+  width: max-content;
+}
